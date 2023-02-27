@@ -22,12 +22,17 @@ export default {
     <Footer />
 </template>
 
-<style>
+<style lengs="scss">
 /* regole base  */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
 }
 
 img{
@@ -38,13 +43,14 @@ ul {
   list-style-type: none;
 
   li{
-    margin: 0 0.5rem;
-
+    margin: 0.5rem;
+  
     a{
       color: inherit;
       text-decoration: none;
     }
   }
 }
+
 
 </style>
