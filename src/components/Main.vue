@@ -110,6 +110,6 @@
   .col{
     width: calc(100% / 5);
     align-items: center;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
   }
 </style>
