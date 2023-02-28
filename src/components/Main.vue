@@ -100,7 +100,7 @@
   }
 
   .img-link{
-    width: 25%;
+    width: 20%;
   }
 
   .text-link{
