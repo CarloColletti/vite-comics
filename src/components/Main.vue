@@ -1,6 +1,6 @@
 <script>
 //import
-import ComicCard from "./Comic-card.vue";
+import ComicCard from "../components/Comic-card.vue";
 
 export default {
   components: { ComicCard },

@@ -13,7 +13,7 @@ export default {
     Comics
   },
 
-  Data (){
+  data (){
     return{
       Comics,
     }
