@@ -7,12 +7,12 @@
   <header>
     <!-- container  -->
     <div class="container">
-      <div class="flex">
+      <div class="flex flex-beet">
 
 
         <img src="../assets/Img/dc-logo.png" alt="DC Loco">
 
-        <ul>
+        <ul class="flex flex-center link-list">
 
           <li><a href="#">CHARACTERS</a></li>
           <li><a href="#">COMICS</a></li>
@@ -31,4 +31,21 @@
   </header>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+  header{
+    margin: 2rem 0;
+  }
+  .flex-beet{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-center{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link-list{
+    font-weight: bold;
+  }
+</style>

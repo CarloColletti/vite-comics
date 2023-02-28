@@ -35,21 +35,25 @@ export default {
   margin: auto;
 }
 
+.flex{
+  display: flex;
+}
+
 img{
   max-width: 100%;
 }
 
 ul {
   list-style-type: none;
+}
 
-  li{
-    margin: 0.5rem;
-  
-    a{
-      color: inherit;
-      text-decoration: none;
-    }
-  }
+ul li{
+  margin: 0.5rem;
+}
+
+ul li a {
+  color: inherit;
+  text-decoration: none;
 }
 
 
