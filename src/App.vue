@@ -3,13 +3,20 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Main from './components/Main.vue';
-
+import Comics from '../src/_comics';
 //export
 export default {
   components: {
     Header,
     Footer,
-    Main
+    Main,
+    Comics
+  },
+
+  Data (){
+    return{
+      Comics,
+    }
   }
 
 }
@@ -18,7 +25,7 @@ export default {
 <template>
   <!-- stampo su html -->
     <Header />
-    <Main />
+    <Main :comicsList="Comics" />
     <Footer />
 </template>
 
@@ -38,6 +45,11 @@ export default {
 .flex{
   display: flex;
 }
+
+.wrap{
+  flex-wrap: wrap;
+}
+
 
 img{
   max-width: 100%;

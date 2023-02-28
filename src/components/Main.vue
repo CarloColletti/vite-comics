@@ -1,4 +1,15 @@
 <script>
+//import
+import ComicCard from "./Comic-card.vue";
+
+export default {
+  components: { ComicCard },
+  props: { comicsList: Array },
+  data() {
+    return {
+    };
+  },
+};
 
 </script>
 
@@ -6,13 +17,15 @@
 
   <main>
     <!-- place holdwer -->
-    <section class="place-holder-back">
-      <div class="container">
-        <div class="content">
-          <span class="place-holder">
-            --> Content goes here
-          </span>
-        </div>
+    <section class="courrent-series-back">
+      <div class="container flex wrap">
+        <ComicCard
+          v-for="comic in comicsList"
+          :title="comic.series"
+          :image="comic.thumb"
+          :type="comic.type"
+        />
+        
       </div>
     </section>
 
@@ -22,7 +35,7 @@
         <div class="link-merch flex">
 
           <!-- init-col -->
-          <div class="col flex">
+          <div class="col-link flex">
             <img src="../assets/Img/buy-comics-digital-comics.png" class="img-link" alt="buy-online">
             <span class="text-link">
               DIGITAL COMICS
@@ -31,7 +44,7 @@
           <!-- fin-col -->
 
           <!-- init-col -->
-          <div class="col flex">
+          <div class="col-link flex">
             <img src="../assets/Img/buy-comics-merchandise.png" class="img-link" alt="buy-merch">
             <span class="text-link">
               DC MERCHANDISE
@@ -40,7 +53,7 @@
           <!-- fin-col -->
 
           <!-- init-col -->
-          <div class="col flex">
+          <div class="col-link flex">
             <img src="../assets/Img/buy-comics-subscriptions.png" class="img-link" alt="sub">
             <span class="text-link">
               SUBSCRIPTION
@@ -49,7 +62,7 @@
           <!-- fin-col -->
 
           <!-- init-col -->
-          <div class="col flex">
+          <div class="col-link flex">
             <img src="../assets/Img/buy-comics-shop-locator.png" class="img-link" alt="shop-map">
             <span class="text-link">
               COMIC SHOP LOCATOR
@@ -58,7 +71,7 @@
           <!-- fin-col -->
 
           <!-- init-col -->
-          <div class="col flex">
+          <div class="col-link flex">
             <img src="../assets/Img/buy-dc-power-visa.svg" class="img-link" alt="power-visa">
             <span class="text-link">
                 DC POWER VISA
@@ -75,20 +88,14 @@
 </template>
 
 <style lang="scss" scoped>
-  // debug 
-  .place-holder{
-    color: white;
-    font-size: 1.4rem;
-  }
-  
-  .content{
-    height: 120px;
-  }
-  
-  .place-holder-back{
+  // current series (black part)
+    
+  .courrent-series-back{
     background-color: black;
   }
   //************* */
+
+  // merch links (blue part)
 
   .link-merch-back{
     background-color: #0282f9;
@@ -107,7 +114,7 @@
     padding-left: 20px;
   }
 
-  .col{
+  .col-link{
     width: calc(100% / 5);
     align-items: center;
     padding: 2.5rem 0;
